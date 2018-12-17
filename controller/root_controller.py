@@ -22,15 +22,27 @@ def run():
         choice = terminal_view.get_choice(options)
         if choice == "1":
             store_controller.run()
+            choice = "0"
+        
         elif choice == "2":
             hr_controller.run()
+            choice = "0"
+        
         elif choice == "3":
             inventory_controller.run()
+            choice = "0"
+        
         elif choice == "4":
             accounting_controller.run()
+            choice = "0"
+        
         elif choice == "5":
             sales_controller.run()
+            choice = "0"
+        
         elif choice == "6":
             crm_controller.run()
+            choice = "0"
+        
         else:
             terminal_view.print_error_message("There is no such choice.")

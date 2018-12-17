@@ -40,7 +40,7 @@ def print_result(result, label):
     # your code
 
 
-def print_menu(title, list_options, exit_message):
+def print_menu(title, list_options, exit_message):  # print_menu("Main menu", options, "Exit program")
     """
     Displays a menu. Sample output:
         Main menu:
@@ -62,9 +62,20 @@ def print_menu(title, list_options, exit_message):
     """
 
     # your code
+    print(title)
+    options = print("""
+        Main menu:
+            (1) Store manager
+            (2) Human resources manager
+            (3) Inventory manager
+            (4) Accounting manager
+            (5) Sales manager
+            (6) Customer relationship management (CRM)
+            (0) Exit program
+    What you want to do? """)
 
 
-def get_inputs(list_labels, title):
+def get_inputs(list_labels, title):  # inputs = get_inputs(["Please enter a number: "], "")
     """
     Gets list of inputs from the user.
     Sample call:
@@ -86,13 +97,18 @@ def get_inputs(list_labels, title):
     inputs = []
 
     # your code
+    print(list_labels[0])
+    user_input_1 = input()
+    inputs.append(user_input_1)
 
     return inputs
 
+
 def get_choice(options):
-    print_menu("Main menu",options, "Exit program")
-    inputs = get_inputs(["Please enter a number: "], "")
+    print_menu("Main menu", options, "Exit program")
+    inputs = get_inputs(["Please enter a number: "], "Main menu choice")
     return inputs[0]
+
 
 def print_error_message(message):
     """

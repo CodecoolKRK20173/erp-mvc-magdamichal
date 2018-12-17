@@ -15,3 +15,4 @@ def run():
     """
 
     # your code
+    print("URUCHOMIŁEM STORE CONTROLLER")

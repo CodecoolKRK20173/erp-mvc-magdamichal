@@ -14,3 +14,4 @@ def run():
     """
 
     # your code
+    print("URUCHOMIŁEM HR CONTROLLER")
